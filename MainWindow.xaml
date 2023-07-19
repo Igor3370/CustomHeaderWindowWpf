@@ -1,0 +1,35 @@
+﻿<Window x:Class="CustomHeaderWindowWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomHeaderWindowWpf"
+        mc:Ignorable="d" Icon="Resources\icon.png"
+        Title="KitKat" Height="450" Width="800">
+    <WindowChrome.WindowChrome >
+        <WindowChrome  />
+    </WindowChrome.WindowChrome>
+    <Border Name="nameBorder" BorderBrush ="DarkCyan">
+        <DockPanel>
+            <Border Background="DarkCyan"  DockPanel.Dock="Top" Height="29" VerticalAlignment="Top">
+                <DockPanel >
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Width="150" Height="29" WindowChrome.IsHitTestVisibleInChrome="True" FlowDirection="RightToLeft" VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <Border Name="close" Width="47" Height="29" Background="DarkCyan" PreviewMouseUp="header_PreviewMouseUp"  PreviewMouseDown="header_PreviewMouseDown"  MouseLeave="header_MouseLeave"  MouseEnter="header_MouseEnter">
+                            <Label Content="✕" HorizontalAlignment="Center" Margin="0,1,0,0"  FontSize="14" FontFamily="Arial" Foreground="White" />
+                        </Border>
+                        <Border Name="maxmin" Width="47" Height="29" Background="DarkCyan" PreviewMouseUp="header_PreviewMouseUp"  PreviewMouseDown="header_PreviewMouseDown" MouseLeave="header_MouseLeave"  MouseEnter="header_MouseEnter" >
+                            <Label Name="labelMaxmin" Content="&#9744;" HorizontalAlignment="Center" Margin="0,-1,0,0"  FontSize="14" Foreground="White" />
+                        </Border>
+                        <Border Name="roll" Width="47" Height="29" Background="DarkCyan" PreviewMouseUp="header_PreviewMouseUp"  PreviewMouseDown="header_PreviewMouseDown" MouseLeave="header_MouseLeave"  MouseEnter="header_MouseEnter" >
+                            <Label Content="&#8211;" HorizontalAlignment="Center" Margin="0,-4,0,0"  FontSize="16" Foreground="White" />
+                        </Border>
+                    </StackPanel>
+                    <Border Name="title" Width="30" Height="29" Margin="3,0">
+                        <Image Source="Resources\icon.png"/>
+                    </Border>
+                    <Label Content="KitKat" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold"/>
+                </DockPanel>
+            </Border>
+        </DockPanel>
+    </Border>
+</Window>
